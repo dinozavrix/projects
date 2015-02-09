@@ -1,0 +1,268 @@
+/* цвета чтоб проще находить и использовать
+text   #4e8497
+title  #ff5760
+link   #81c298
+yellow #ede495
+border #f0947c
+*/
+
+* {
+	margin: 0;	/*сброс внешнего отступа*/
+	padding: 0; /*сброс внутреннего отступа*/
+	outline:none; /*сброс рамки*/
+}
+
+img {
+	border:0; /*рамка у картинок внутри ссылок*/
+}
+
+ul{
+	list-style:none; /*чтоб не было точек у списков*/
+}
+
+body {
+	font: 12px Arial, sans-serif; /*шрифт по умолчанию документа*/
+	color: #4e8497; /*цвет текста документа*/
+	background: #ffffff; /*фон документа*/
+	min-width: 960px; /*мин ширина от мелких ошибок*/
+}
+
+a{
+	color: #81c298;
+}
+
+a:hover{
+	color: #ff5760;
+}
+
+.main{ /*центрирование страницы по центру с указанной шириной*/
+	width: 940px;
+	margin:0 auto;
+}
+
+h1{
+
+}
+
+h2{
+	font:italic 20px Georgia, Times New Roman, serif;
+	color: #ff5760;
+	margin-bottom: 25px;
+}
+
+h2>span{
+	display: inline-block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f0947c;
+}
+
+h3{
+
+}
+
+
+/* ######################################################## */
+
+
+.b-header{
+	background: #ede495;
+	margin: 14px 0;
+}
+
+.b-header .b-logo{
+	float: left;
+	width: 220px;
+	margin: 11px 100px 11px 0;
+
+}
+
+.b-header .b-logo a:hover{
+	opacity:0.5;
+}
+
+.b-header .b-logo .site-title{
+	color: #f0947c;
+	font-size: 13px;
+	font-style: italic;
+
+}
+
+.b-header .b-nav{
+	float: left;
+	width: 480px;
+	margin: 32px 0 25px;
+	font-size: 18px;
+}
+
+.b-header .b-nav li{
+	float: left;
+	margin-right: 32px;
+}
+
+.b-header .b-nav li:last-child{ /*последний элемент списка без отступа*/
+	margin-right: 0;
+}
+
+.b-header .b-nav li a{
+	color: #f0947c;
+	text-decoration: none;
+}
+
+.b-header .b-search{
+	width: 140px;
+	float: right; /*жмем его к правому краю*/
+	margin: 23px 0;
+	position: relative;
+}
+
+.b-header .b-search:before{
+	content: '';
+	position: absolute;
+	width: 21px;
+	height: 18px;
+	background: url(../i/sprite.png) 0 0 no-repeat;
+	top: 7px;
+	left: 7px;
+}
+
+.b-header .b-search input{
+width: 95px;
+height: 19px;
+padding: 5px 10px 5px 35px;
+border: 1px solid #ef937b;
+border-radius: 4px;
+background-clip: padding-box;
+background-color: #fff;
+box-shadow: inset 0 1px 3px rgba(0,0,0,.28);
+}
+
+
+.b-header:after{ /*псевдо элемент, использован для сброса флоатов*/
+	content: '';
+	display: block;
+	clear: both;
+}
+
+
+/* ######################################################## */
+
+.b-slider .slide{
+	height: 309px;
+	background: url(../i/slide.jpg) 0 0 no-repeat;
+	position: relative;
+	margin: 10px 0 40px;
+}
+
+.b-slider .slide .title{
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	background: #000;
+	background: rgba(0,0,0,0.5);
+	color: #ffffff;
+	font: italic 30px Georgia, Times New Roman, serif;
+	padding: 15px 10px;
+}
+
+/* ######################################################## */
+
+.b-most-popular:after{ /*псевдо элемент, использован для сброса флоатов*/
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.b-most-popular .b-most-popular-chiefs{ 
+	float: left;
+	width: 220px;
+	
+}
+
+.b-most-popular .b-most-popular-chiefs li{ 
+	padding: 0 0 20px;
+	clear: both;
+	overflow: auto;
+}
+
+.b-most-popular .b-most-popular-chiefs .photo{ 
+	width: 80px;
+	height: 80px;
+	overflow: hidden; /*исправляем отступы изза флоатов скрывая все что вне элемента - хак*/
+	border-radius: 100%;
+	display: block;
+	float: left;
+	
+}
+
+.b-most-popular .b-most-popular-chiefs .info{ 
+	float: left;
+	margin: 23px 0 0 15px;
+	
+}
+
+.b-most-popular .b-most-popular-chiefs .name{ 
+	font-size: 14px;
+	margin-bottom: 5px;
+	
+}
+
+.b-most-popular .b-most-popular-chiefs .city{ 
+	font-style: italic;
+	color: #f0947c;
+	
+}
+
+.b-most-popular .b-most-popular-recieps{ 
+	float: right;
+	width: 700px;
+	overflow: hidden;
+}
+
+.b-most-popular .b-most-popular-recieps ul.recieps{ 
+	margin-right: -20px;
+}
+
+.b-most-popular .b-most-popular-recieps li{ 
+	float: left;
+	margin-right: 20px;
+	text-align: center;
+	width: 220px;
+	margin-bottom: 20px;
+}
+
+.b-most-popular .b-most-popular-recieps li img{  
+	display: block;
+}
+
+.b-most-popular .b-most-popular-recieps li .title{  
+	display: block;
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+/* ######################################################## */
+
+.b-footer{
+	background: #4e8497;
+	color: #ffffff;
+	padding: 27px 0;
+	margin-bottom: 10px;
+}
+
+.b-footer:after{ /*псевдо элемент, использован для сброса флоатов*/
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.b-footer .logo{
+	width: 107px;
+	height: 20px;
+	background: url(../i/sprite.png) 0 -40px no-repeat;
+	float: left;
+}
+
+.b-footer .copyright{
+	float: right;
+	margin-top: 5px;
+}
